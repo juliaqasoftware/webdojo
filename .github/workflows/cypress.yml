@@ -16,13 +16,5 @@ jobs:
       - name: Instalar dependências e rodar testes Cypress
         uses: cypress-io/github-action@v6
         with:
+          working-directory: web
           browser: chrome
-
-      - name: Salvar evidências em caso de falha
-        uses: actions/upload-artifact@v4
-        if: failure()
-        with:
-          name: evidencias-falha
-          path: |
-            cypress/screenshots
-            cypress/videos
