@@ -18,3 +18,5 @@ jobs:
         with:
           working-directory: web
           browser: chrome
+          start: npm run dev # Substitua pelo comando que você usa no terminal local para subir o site (ex: npm start, npm run dev)
+          wait-on: "http://localhost:3000" # Aguarda o site responder nesta URL antes de abrir o Cypress
